@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY; // <-- Replace with your Gemini API key
-const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=" + GEMINI_API_KEY;
+const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" + GEMINI_API_KEY;
 
 function getPrompt(language, level) {
   return `Generate 10 multiple-choice programming quiz questions for ${language} at ${level} level. Each question should have 3 options and specify the correct answer. Format as JSON array: [{text, options, answer}].`;
